@@ -12,7 +12,7 @@ URL:		http://mahon.cwx.net/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-2.2.15b-mdkconf.patch.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	XFree86-devel
+BuildRequires:	X11-devel
 
 %description
 An easy to use text editor. Intended to be usable with little or no
