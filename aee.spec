@@ -1,6 +1,6 @@
 %define	name	aee
 %define	version	2.2.15b
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 
 Summary:	An easy to use text editor
 Name:		%{name}
