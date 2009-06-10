@@ -1,6 +1,6 @@
 %define	name	aee
 %define	version	2.2.15b
-%define	release	%mkrel 5
+%define	release	%mkrel 6
 
 Summary:	An easy to use text editor
 Name:		%{name}
@@ -11,6 +11,7 @@ Group:		Editors
 URL:		http://mahon.cwx.net/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-2.2.15b-mdkconf.patch.bz2
+Patch1:		%{name}-2.2.15b-fix-str-fmt.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	X11-devel
 
@@ -25,6 +26,7 @@ and much more.
 %prep
 %setup -q
 %patch0 -p1 -b .peroyvind
+%patch1 -p1 -b .strfmt
 
 %build
 make both OPTFLAGS="$RPM_OPT_FLAGS"
