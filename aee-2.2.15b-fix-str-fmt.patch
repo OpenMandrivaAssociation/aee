@@ -1,0 +1,12 @@
+diff -p -up aee-2.2.15b/aee.c.strfmt aee-2.2.15b/aee.c
+--- aee-2.2.15b/aee.c.strfmt	2009-06-10 04:44:24.000000000 +0200
++++ aee-2.2.15b/aee.c	2009-06-10 04:45:41.000000000 +0200
+@@ -2493,7 +2493,7 @@ char *string;		/* string containing user
+ 	}
+ 	if (shell_fork)
+ 	{
+-		printf(press_ret_to_cont_str);
++		printf("%s", press_ret_to_cont_str);
+ 		fflush(stdout);
+ 		while (((in = getchar()) != '\n') && (in != '\r'))
+ 			;
