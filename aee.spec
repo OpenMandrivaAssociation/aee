@@ -13,7 +13,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-2.2.15b-mdkconf.patch
 Patch1:		%{name}-2.2.15b-fix-str-fmt.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(x11)
 
 %description
 An easy to use text editor. Intended to be usable with little or no
