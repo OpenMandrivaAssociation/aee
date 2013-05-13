@@ -1,6 +1,6 @@
 %define	name	aee
 %define	version	2.2.15b
-%define	release	%mkrel 7
+%define release 	8
 
 Summary:	An easy to use text editor
 Name:		%{name}
@@ -12,7 +12,6 @@ URL:		http://mahon.cwx.net/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-2.2.15b-mdkconf.patch
 Patch1:		%{name}-2.2.15b-fix-str-fmt.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	pkgconfig(x11)
 
 %description
