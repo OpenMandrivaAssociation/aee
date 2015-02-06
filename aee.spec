@@ -4,7 +4,7 @@
 Summary:	An easy to use text editor
 Name:		aee
 Version:	2.2.15b
-Release:	9
+Release:	10
 License:	Artistic
 Group:		Editors
 Url:		http://mahon.cwx.net/
