@@ -1,0 +1,48 @@
+diff -up aee-2.2.21/new_curse.c.omv~ aee-2.2.21/new_curse.c
+--- aee-2.2.21/new_curse.c.omv~	2020-12-31 17:50:29.286371106 +0100
++++ aee-2.2.21/new_curse.c	2020-12-31 17:50:41.771802702 +0100
+@@ -465,6 +465,8 @@ char *String_names[] = {
+ 
+ char *new_curse = "October 1987";
+ 
++struct _line *top_of_win;
++
+ char in_buff[100];	/* buffer for ungetch			*/
+ int bufp;		/* next free position in in_buff	*/
+ 
+diff -up aee-2.2.21/new_curse.h.omv~ aee-2.2.21/new_curse.h
+--- aee-2.2.21/new_curse.h.omv~	2020-12-31 17:49:47.056915141 +0100
++++ aee-2.2.21/new_curse.h	2020-12-31 17:49:51.645073035 +0100
+@@ -161,7 +161,7 @@ struct _line {
+ 	int number;
+ 	};
+ 
+-struct _line *top_of_win;
++extern struct _line *top_of_win;
+ 
+ typedef struct WIND {
+ 	int SR;		/* starting row		*/
+diff -up aee-2.2.21/Xcurse.c.omv~ aee-2.2.21/Xcurse.c
+--- aee-2.2.21/Xcurse.c.omv~	2020-12-31 17:50:02.830458265 +0100
++++ aee-2.2.21/Xcurse.c	2020-12-31 17:50:25.478239566 +0100
+@@ -46,6 +46,8 @@ WINDOW *clear_win;
+ 
+ char *new_curse = "February 1988";
+ 
++struct _line *top_of_win;
++
+ int STAND = FALSE;	/* is standout mode activated?			*/
+ int Curr_x;		/* current x position on screen			*/
+ int Curr_y;		/* current y position on the screen		*/
+diff -up aee-2.2.21/Xcurse.h.omv~ aee-2.2.21/Xcurse.h
+--- aee-2.2.21/Xcurse.h.omv~	2020-12-31 17:49:54.432168983 +0100
++++ aee-2.2.21/Xcurse.h	2020-12-31 17:50:00.986394724 +0100
+@@ -132,7 +132,7 @@ struct _line {
+ 	int number;
+ 	};
+ 
+-struct _line *top_of_win;
++extern struct _line *top_of_win;
+ 
+ typedef struct WIND {
+ 	int SR;		/* starting row		*/

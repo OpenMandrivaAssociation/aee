@@ -3,14 +3,15 @@
 
 Summary:	An easy to use text editor
 Name:		aee
-Version:	2.2.15b
-Release:	10
+Version:	2.2.21
+Release:	1
 License:	Artistic
 Group:		Editors
-Url:		http://mahon.cwx.net/
-Source0:	%{name}-%{version}.tar.bz2
+# Abandoned upstream. We grab the source from Gentoo's backup.
+Source0:	http://ftp.uni-kl.de/pub/linux/gentoo/distfiles/e5/aee-%{version}.tar.gz
 Patch0:		%{name}-2.2.15b-mdkconf.patch
 Patch1:		%{name}-2.2.15b-fix-str-fmt.patch
+Patch2:		%{name}-2.2.21-compile.patch
 BuildRequires:	pkgconfig(x11)
 
 %description
@@ -31,9 +32,7 @@ and much more.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%patch0 -p1 -b .peroyvind
-%patch1 -p1 -b .strfmt
+%autosetup -p1
 
 %build
 make both OPTFLAGS="%{optflags}"
