@@ -3,14 +3,13 @@
 
 Summary:	An easy to use text editor
 Name:		aee
-Version:	2.2.21
+Version:	2.2.22
 Release:	1
 License:	Artistic
 Group:		Editors
-# Abandoned upstream. We grab the source from Gentoo's backup.
-Source0:	http://ftp.uni-kl.de/pub/linux/gentoo/distfiles/e5/aee-%{version}.tar.gz
+# Abandoned upstream. We grab the source from FreeBSD's clone
+Source0:	https://gitlab.com/ports1/aee/-/archive/%{version}/aee-%{version}.tar.gz
 Patch0:		%{name}-2.2.15b-mdkconf.patch
-Patch1:		%{name}-2.2.15b-fix-str-fmt.patch
 Patch2:		%{name}-2.2.21-compile.patch
 BuildRequires:	pkgconfig(x11)
 
@@ -33,6 +32,7 @@ and much more.
 
 %prep
 %autosetup -p1
+chmod +x create.mk*
 
 %build
 make both OPTFLAGS="%{optflags}"
