@@ -11,6 +11,7 @@ Group:		Editors
 Source0:	https://gitlab.com/ports1/aee/-/archive/%{version}/aee-%{version}.tar.gz
 Patch0:		%{name}-2.2.15b-mdkconf.patch
 Patch2:		%{name}-2.2.21-compile.patch
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 
 %description
